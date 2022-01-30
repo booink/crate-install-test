@@ -18,4 +18,4 @@ source = "git+https://github.com/booink/public-crate?tag=v1.1.0#ae764159e1281619
 [[package]]
 name = "crate-test-2"
 version = "1.0.0"
-source = "git+https://github.com/booink/public-crate?tag=v1.0.0#5538e355ae4018751cca2ba159054f4b3b6a8bf5"
+source = "git+https://github.com/booink/public-crate?tag=v1.1.0#ae764159e1281619fb51035ec93f08826cd50c74"
