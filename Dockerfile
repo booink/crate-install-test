@@ -26,6 +26,13 @@ RUN echo "install rust tools" \
   && cargo install cargo-watch cargo-make \
   && chmod go-w /usr/local/cargo /usr/local/cargo/bin
 
+RUN echo "[credential]\n\
+  helper = store --file /root/.git-credential\n" > ~/.gitconfig
+
+ARG GITHUB_USER
+ARG GITHUB_TOKEN
+RUN echo "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com" > /root/.git-credential
+
 WORKDIR /app
 
 COPY ./Cargo.toml Cargo.toml

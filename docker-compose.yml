@@ -3,6 +3,9 @@ services:
   install-test:
     build:
       context: .
+      args:
+        - GITHUB_USER=$GITHUB_USER
+        - GITHUB_TOKEN=$GITHUB_TOKEN
     env_file: .env
     volumes:
       - .:/app
